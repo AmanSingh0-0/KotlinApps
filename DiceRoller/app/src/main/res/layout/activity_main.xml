@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context=".MainActivity">
+    <!--id is to connect the button in xml file to the  kotlin code. to process it.
+    the data can also be dynamically change using the kotlin file -->
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hey Peeps!"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"/>
+    <ImageView
+        android:id="@+id/dice_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/empty_dice"
+        tools:src = "@drawable/dice_1"/>
+    <!--app:srcCompat is used to maintain compatibility with older model-->
+    <!--The above tools and android src lines does the following
+    It shows the dice on preview of app i.e. on my system(regardless of using button)
+    but it doesn't show the dice image unless I tap the button on my phone-->
+    <!--id is to connect the button in xml file to the  kotlin code. to process it.
+    the data can also be dynamically change using the kotlin file -->
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/roll"/>
+</LinearLayout>
