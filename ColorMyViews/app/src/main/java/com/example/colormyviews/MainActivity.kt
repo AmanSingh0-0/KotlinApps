@@ -20,11 +20,13 @@ class MainActivity : AppCompatActivity() {
         val boxThreeText = findViewById<TextView>(R.id.box_three_text)
         val boxFourText = findViewById<TextView>(R.id.box_four_text)
         val boxFiveText = findViewById<TextView>(R.id.box_five_text)
-
+        val boxRed = findViewById<TextView>(R.id.red_text)
+        val boxYellow = findViewById<TextView>(R.id.yellow_text)
+        val boxGreen = findViewById<TextView>(R.id.green_text)
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
         val clickableViews: List<View> =
             listOf(boxOneText, boxTwoText, boxThreeText, boxFourText,
-                boxFiveText, rootConstraintLayout)
+                boxFiveText, boxRed,boxYellow,boxGreen,rootConstraintLayout)
         for (items in clickableViews) {
             items.setOnClickListener { makeColored(it) }
 
@@ -43,6 +45,9 @@ class MainActivity : AppCompatActivity() {
             R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
 
+            R.id.red_text -> box_three_text.setBackgroundResource(android.R.color.holo_red_dark)
+            R.id.yellow_text -> view.setBackgroundResource(android.R.color.holo_orange_light)
+            R.id.green_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
